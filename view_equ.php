@@ -19,12 +19,9 @@
     <hr>
     <table id="mytable" class="table table-bordered table-striped">
         <thead>
-            <th>#</th>
-            <th>ชื่อ</th>
-            <th>นามสกุล</th>
-            <th>รหัสนักศึกษา</th>
-            <th>หมายเลขห้อง</th>
-            <th>Posting Date</th>
+            <th>รหัสอุปกรณ์</th>
+            <th>ชื่ออุปกรณ์</th>
+            <th>ยอดคงเหลือ</th>
             <th>Edit</th>
             <th>Delete</th>
         </thead>
@@ -33,21 +30,18 @@
             <?php 
 
                 include_once('functions.php');
-                $fetchdata = new DB_con();
-                $sql = $fetchdata->fetchdata();
+                $fetchdata2 = new DB_con();
+                $sql = $fetchdata2->fetchdata2();
                 while($row = mysqli_fetch_array($sql)) {
 
             ?>
 
                 <tr>
-                    <td><?php echo $row['id']; ?></td>
-                    <td><?php echo $row['firstname']; ?></td>
-                    <td><?php echo $row['lastname']; ?></td>
-                    <td><?php echo $row['phonenumber']; ?></td>
-                    <td><?php echo $row['address']; ?></td>
-                    <td><?php echo $row['postingdate']; ?></td>
-                    <td><a href="update.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">Edit</a></td>
-                    <td><a href="delete.php?del=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</a></td>
+                    <td><?php echo $row['equ_id']; ?></td>
+                    <td><?php echo $row['name_equ']; ?></td>
+                    <td><?php echo $row['total_equ']; ?></td>
+                    <td><a href="equ_update.php?equ_id=<?php echo $row['equ_id']; ?>" class="btn btn-primary">Edit</a></td>
+                    <td><a href="equ_delete.php?del=<?php echo $row['equ_id']; ?>" class="btn btn-danger">Delete</a></td>
                 </tr>
 
             <?php 
