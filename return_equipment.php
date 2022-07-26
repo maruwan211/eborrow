@@ -15,6 +15,7 @@
     <a href="view_equ.php" class="btn btn-success">แสดงรายการอุปกรณ์</a>
     <a href="borrow_equipment.php" class="btn btn-success">บันทึกการยืมอุปกรณ์ </a>
     <a href="return_equipment.php" class="btn btn-success">บันทึกการคืนอุปกรณ์ </a>
+    <a href="review_equ.php" class="btn btn-success">ประวัติการยืมอุปกรณ์</a>
     <hr>
     <table id="mytable" class="table table-bordered table-striped">
         <thead>

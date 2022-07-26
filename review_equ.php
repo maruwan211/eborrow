@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
 </head>
 <body>
-    <div class="container">
+<div class="container">
     <h1 class="mt-5">หน้าแรก ระบบบันทึกการยืมอุปกรณ์ มหาวิทยาลัยราชภัฎยะลา </h1>
     <a href="insert.php" class="btn btn-success">เพิ่มข้อมูลนักศึกษา</a>
     <a href="equipment.php" class="btn btn-success">เพิ่มข้อมูลอุปกรณ์</a>
@@ -19,13 +19,10 @@
     <hr>
     <table id="mytable" class="table table-bordered table-striped">
         <thead>
-            <th>#</th>
-            <th>ชื่อ</th>
-            <th>นามสกุล</th>
-            <th>รหัสนักศึกษา</th>
-            <th>หมายเลขห้อง</th>
-            <th>Posting Date</th>
-            <th>Edit</th>
+            <th>รหัส</th>
+            <th>ชื่อผู้ทำรายการ</th>
+            <th>ชื่ออุปกรณ์</th>
+            <th>วันที่ทำรายการ</th>
             <th>Delete</th>
         </thead>
 
@@ -33,21 +30,18 @@
             <?php 
 
                 include_once('functions.php');
-                $fetchdata = new DB_con();
-                $sql = $fetchdata->fetchdata();
+                $fetchdata2 = new DB_con();
+                $sql = $fetchdata2->fetchdata3();
                 while($row = mysqli_fetch_array($sql)) {
 
             ?>
 
                 <tr>
-                    <td><?php echo $row['id']; ?></td>
-                    <td><?php echo $row['firstname']; ?></td>
-                    <td><?php echo $row['lastname']; ?></td>
-                    <td><?php echo $row['phonenumber']; ?></td>
-                    <td><?php echo $row['address']; ?></td>
-                    <td><?php echo $row['postingdate']; ?></td>
-                    <td><a href="update.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">Edit</a></td>
-                    <td><a href="delete.php?del=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</a></td>
+                    <td><?php echo $row['eb_id']; ?></td>
+                    <td><?php echo $row['eb_name']; ?></td>
+                    <td><?php echo $row['name_equ']; ?></td>
+                    <td><?php echo $row['date']; ?></td>
+                    <td><a href="equ_delete.php?equ_id=<?php echo $row['equ_id']; ?>" class="btn btn-danger">Delete</a></td>
                 </tr>
 
             <?php 

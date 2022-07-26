@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
 </head>
 <body>
-    
-    <div class="container">
+<div class="container">
     <h1 class="mt-5">หน้าแรก ระบบบันทึกการยืมอุปกรณ์ มหาวิทยาลัยราชภัฎยะลา </h1>
     <a href="insert.php" class="btn btn-success">เพิ่มข้อมูลนักศึกษา</a>
     <a href="equipment.php" class="btn btn-success">เพิ่มข้อมูลอุปกรณ์</a>
     <a href="view_equ.php" class="btn btn-success">แสดงรายการอุปกรณ์</a>
     <a href="borrow_equipment.php" class="btn btn-success">บันทึกการยืมอุปกรณ์ </a>
     <a href="return_equipment.php" class="btn btn-success">บันทึกการคืนอุปกรณ์ </a>
+    <a href="review_equ.php" class="btn btn-success">ประวัติการยืมอุปกรณ์</a>
     <hr>
     <table id="mytable" class="table table-bordered table-striped">
         <thead>
@@ -41,7 +41,7 @@
                     <td><?php echo $row['name_equ']; ?></td>
                     <td><?php echo $row['total_equ']; ?></td>
                     <td><a href="equ_update.php?equ_id=<?php echo $row['equ_id']; ?>" class="btn btn-primary">Edit</a></td>
-                    <td><a href="equ_delete.php?del=<?php echo $row['equ_id']; ?>" class="btn btn-danger">Delete</a></td>
+                    <td><a href="equ_delete.php?equ_id=<?php echo $row['equ_id']; ?>" class="btn btn-danger">Delete</a></td>
                 </tr>
 
             <?php 

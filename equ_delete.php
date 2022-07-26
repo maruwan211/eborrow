@@ -2,10 +2,10 @@
 
     include_once('functions.php');
 
-    if (isset($_GET['del'])) {
+    if (isset($_GET['equ_id'])) {
         $equ_id = $_GET['equ_id'];
-        $deletedata2 = new DB_con();
-        $sql = $deletedata2->delete2($equ_id);
+        $deletedata = new DB_con();
+        $sql = $deletedata->delete_equ($equ_id);
 
         if ($sql) {
             echo "<script>alert('Record Deleted Successfully!');</script>";

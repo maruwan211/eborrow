@@ -37,6 +37,10 @@
             $result = mysqli_query($this->dbcon, "SELECT * FROM tblequipment");
             return $result;
         }
+        public function fetchdata3() {
+            $result = mysqli_query($this->dbcon, "SELECT * FROM tbl_eborrow"); //SELECT * FROM `tbl_eborrow`
+            return $result;
+        }
         public function fetchonerecord($userid) {
             $result = mysqli_query($this->dbcon, "SELECT * FROM tblusers WHERE id = '$userid'");
             return $result;
@@ -69,7 +73,7 @@
             $deleterecord = mysqli_query($this->dbcon, "DELETE FROM tblusers WHERE id = '$userid'");
             return $deleterecord;
         }
-        public function delete2($equ_id) {
+        public function delete_equ($equ_id) {
             $deleterecord = mysqli_query($this->dbcon, "DELETE FROM tblequipment WHERE equ_id = '$equ_id'");
             return $deleterecord;
         }
