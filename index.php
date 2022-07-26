@@ -10,17 +10,17 @@
 <body>
     
     <div class="container">
-    <h1 class="mt-5">Infomation Page</h1>
-    <a href="insert.php" class="btn btn-success">Go to Insert</a>
+    <h1 class="mt-5">ระบบบันทึกการยืมอุปกรณ์ มหาวิทยาลัยราชภัฎยะลา </h1>
+    <a href="insert.php" class="btn btn-success">เพิ่มข้อมูลนักศึกษา</a>
+    <a href="insert.php" class="btn btn-success">เพิ่มข้อมูลอุปกรณ์</a>
     <hr>
     <table id="mytable" class="table table-bordered table-striped">
         <thead>
             <th>#</th>
-            <th>First name</th>
-            <th>Last name</th>
-            <th>Email</th>
-            <th>Phone number</th>
-            <th>Address</th>
+            <th>ชื่อ</th>
+            <th>นามสกุล</th>
+            <th>รหัสนักศึกษา</th>
+            <th>หมายเลขห้อง</th>
             <th>Posting Date</th>
             <th>Edit</th>
             <th>Delete</th>
@@ -40,7 +40,6 @@
                     <td><?php echo $row['id']; ?></td>
                     <td><?php echo $row['firstname']; ?></td>
                     <td><?php echo $row['lastname']; ?></td>
-                    <td><?php echo $row['email']; ?></td>
                     <td><?php echo $row['phonenumber']; ?></td>
                     <td><?php echo $row['address']; ?></td>
                     <td><?php echo $row['postingdate']; ?></td>

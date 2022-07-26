@@ -39,15 +39,15 @@
     <div class="container">
         <a href="index.php" class="btn btn-primary mt-3">Go Back</a>
         <hr>
-        <h1 class="mt-5">Insert Page</h1>
+        <h1 class="mt-5">เพิ่มข้อมูลนักศึกษา</h1>
         <hr>
         <form action="" method="post">
             <div class="mb-3">
-                <label for="firstname" class="form-label">First name</label>
+                <label for="firstname" class="form-label">ชื่อ</label>
                 <input type="text" class="form-control" name="firstname" required>
             </div>
             <div class="mb-3">
-                <label for="lastname" class="form-label">Last name</label>
+                <label for="lastname" class="form-label">สกุล</label>
                 <input type="text" class="form-control" name="lastname" required>
             </div>
             <div class="mb-3">
@@ -55,14 +55,14 @@
                 <input type="email" class="form-control" name="email" required>
             </div>
             <div class="mb-3">
-                <label for="phonenumber">Phone Number</label>
+                <label for="phonenumber">เบอร์โทรศัพท์</label>
                 <input type="text" class="form-control" name="phonenumber" required>
             </div>
             <div class="mb-3">
-                <label for="address">Address</label>
+                <label for="address">ที่อยู่</label>
                 <textarea name="address"cols="30" rows="10" class="form-control" required></textarea>
             </div>
-            <button type="submit" name="insert" class="btn btn-success">Insert</button>
+            <button type="submit" name="insert" class="btn btn-success">บันทึก</button>
         </form>
     </div>
 
