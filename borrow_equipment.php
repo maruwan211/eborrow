@@ -9,7 +9,7 @@
         $lname = $_POST['lastname'];
         $name_equ = $_POST['name_equ'];
         $total_equ = $_POST['total_equ'];
-        $sql = $insertdata->insert($fname, $lname, $email, $phonenumber, $address);
+        $sql = $insertdata->insert3($fname, $lname, $name_equ, $total_equ);
 
         if ($sql) {
             echo "<script>alert('Record Inserted Successfully!');</script>";
