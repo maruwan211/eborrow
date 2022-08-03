@@ -1,2 +1,5 @@
-# PHP-CRUD-OOP-
-PHP CRUD OOP 
+# FRAMWORK PHP-CRUD-OOP 
+# PHP CRUD OOP 
+# การยืมคืนอุปกรณ์ ต่างๆ ของนักศึกษา 
+ทดสอบการพัฒนาระบบ ในเวลา 3 ชม 
+09.00 น. - 12.00 น.
